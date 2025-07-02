@@ -48,13 +48,14 @@
 			button8 = new Button();
 			openFileDialog1 = new OpenFileDialog();
 			comboBox1 = new ComboBox();
+			checkBox1 = new CheckBox();
 			SuspendLayout();
 			// 
 			// textBox1
 			// 
-			textBox1.Location = new Point(416, 12);
+			textBox1.Location = new Point(454, 12);
 			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(426, 27);
+			textBox1.Size = new Size(494, 27);
 			textBox1.TabIndex = 0;
 			// 
 			// listBox1
@@ -95,9 +96,9 @@
 			// 
 			// textBox3
 			// 
-			textBox3.Location = new Point(416, 78);
+			textBox3.Location = new Point(454, 78);
 			textBox3.Name = "textBox3";
-			textBox3.Size = new Size(426, 27);
+			textBox3.Size = new Size(494, 27);
 			textBox3.TabIndex = 9;
 			// 
 			// label4
@@ -111,9 +112,9 @@
 			// 
 			// richTextBox1
 			// 
-			richTextBox1.Location = new Point(416, 108);
+			richTextBox1.Location = new Point(454, 108);
 			richTextBox1.Name = "richTextBox1";
-			richTextBox1.Size = new Size(426, 148);
+			richTextBox1.Size = new Size(494, 148);
 			richTextBox1.TabIndex = 13;
 			richTextBox1.Text = "";
 			// 
@@ -128,14 +129,14 @@
 			// 
 			// textBox4
 			// 
-			textBox4.Location = new Point(416, 262);
+			textBox4.Location = new Point(454, 262);
 			textBox4.Name = "textBox4";
-			textBox4.Size = new Size(426, 27);
+			textBox4.Size = new Size(494, 27);
 			textBox4.TabIndex = 14;
 			// 
 			// button1
 			// 
-			button1.Location = new Point(748, 295);
+			button1.Location = new Point(854, 295);
 			button1.Name = "button1";
 			button1.Size = new Size(94, 29);
 			button1.TabIndex = 16;
@@ -165,7 +166,7 @@
 			// 
 			// button4
 			// 
-			button4.Location = new Point(648, 295);
+			button4.Location = new Point(754, 295);
 			button4.Name = "button4";
 			button4.Size = new Size(94, 29);
 			button4.TabIndex = 19;
@@ -175,7 +176,7 @@
 			// 
 			// button5
 			// 
-			button5.Location = new Point(548, 295);
+			button5.Location = new Point(654, 295);
 			button5.Name = "button5";
 			button5.Size = new Size(94, 29);
 			button5.TabIndex = 20;
@@ -184,7 +185,7 @@
 			// 
 			// button6
 			// 
-			button6.Location = new Point(448, 295);
+			button6.Location = new Point(554, 295);
 			button6.Name = "button6";
 			button6.Size = new Size(94, 29);
 			button6.TabIndex = 21;
@@ -204,7 +205,7 @@
 			// 
 			// button8
 			// 
-			button8.Location = new Point(348, 295);
+			button8.Location = new Point(454, 295);
 			button8.Name = "button8";
 			button8.Size = new Size(94, 29);
 			button8.TabIndex = 23;
@@ -219,16 +220,27 @@
 			// comboBox1
 			// 
 			comboBox1.FormattingEnabled = true;
-			comboBox1.Location = new Point(416, 45);
+			comboBox1.Location = new Point(454, 45);
 			comboBox1.Name = "comboBox1";
-			comboBox1.Size = new Size(426, 28);
+			comboBox1.Size = new Size(494, 28);
 			comboBox1.TabIndex = 24;
+			// 
+			// checkBox1
+			// 
+			checkBox1.AutoSize = true;
+			checkBox1.Location = new Point(325, 302);
+			checkBox1.Name = "checkBox1";
+			checkBox1.Size = new Size(124, 24);
+			checkBox1.TabIndex = 25;
+			checkBox1.Text = "Specify folder";
+			checkBox1.UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(9F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(1006, 721);
+			ClientSize = new Size(956, 335);
+			Controls.Add(checkBox1);
 			Controls.Add(comboBox1);
 			Controls.Add(button8);
 			Controls.Add(button7);
@@ -248,8 +260,9 @@
 			Controls.Add(label1);
 			Controls.Add(listBox1);
 			Controls.Add(textBox1);
+			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Name = "Form1";
-			Text = "Form1";
+			Text = "Book Renamer";
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -276,5 +289,6 @@
 		private Button button8;
 		private OpenFileDialog openFileDialog1;
 		private ComboBox comboBox1;
+		private CheckBox checkBox1;
 	}
 }
