@@ -149,7 +149,7 @@ namespace BookRen
 				if (f.Substring(f.Length - 3) == "pdf" || f.Substring(f.Length - 4) == "epub")
 				{
 					string relpath = ("." + f.Substring(bookfolerpath.Length)).Replace('\\', '/');
-					if (paths.Add(f)) //true -> not on the list, create new Entry.
+					if (paths.Add(relpath)) //true -> not on the list, create new Entry.
 					{
 						//var be = new BookEntry { path = "." + f.Substring(f.IndexOf("Books") + 5) };
 						var be = new BookEntry { title = relpath.Substring(relpath.LastIndexOf('/') + 1), path = relpath };
