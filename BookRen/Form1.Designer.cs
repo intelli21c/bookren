@@ -49,6 +49,8 @@
 			openFileDialog1 = new OpenFileDialog();
 			comboBox1 = new ComboBox();
 			checkBox1 = new CheckBox();
+			webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+			((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
 			SuspendLayout();
 			// 
 			// textBox1
@@ -235,11 +237,23 @@
 			checkBox1.Text = "Specify folder";
 			checkBox1.UseVisualStyleBackColor = true;
 			// 
+			// webView21
+			// 
+			webView21.AllowExternalDrop = true;
+			webView21.CreationProperties = null;
+			webView21.DefaultBackgroundColor = Color.White;
+			webView21.Location = new Point(12, 334);
+			webView21.Name = "webView21";
+			webView21.Size = new Size(932, 302);
+			webView21.TabIndex = 26;
+			webView21.ZoomFactor = 1D;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(9F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(956, 335);
+			ClientSize = new Size(956, 648);
+			Controls.Add(webView21);
 			Controls.Add(checkBox1);
 			Controls.Add(comboBox1);
 			Controls.Add(button8);
@@ -263,6 +277,7 @@
 			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Name = "Form1";
 			Text = "Book Renamer";
+			((System.ComponentModel.ISupportInitialize)webView21).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -290,5 +305,6 @@
 		private OpenFileDialog openFileDialog1;
 		private ComboBox comboBox1;
 		private CheckBox checkBox1;
+		private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
 	}
 }

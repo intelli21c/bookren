@@ -19,6 +19,7 @@ namespace BookRen
 			bookfolerpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Books").ToString();
 			filepath = Path.Combine(bookfolerpath, "books.json").ToString();
 			if (!Directory.Exists(bookfolerpath) || !File.Exists(filepath)) checkBox1.Checked = true;
+			webView21.EnsureCoreWebView2Async();
 
 		}
 
@@ -110,7 +111,8 @@ namespace BookRen
 
 		private void button4_Click(object sender, EventArgs e)
 		{
-			System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", "\"file:///" + Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Books").ToString() + blbk[listBox1.SelectedIndex].path.Substring(1) + "\"");
+			//System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe", "\"file:///" + Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Books").ToString() + blbk[listBox1.SelectedIndex].path.Substring(1) + "\"");
+			webView21.CoreWebView2.Navigate(("file:///" + Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Books").ToString() + blbk[listBox1.SelectedIndex].path.Substring(1)).Replace('/', '\\'));
 		}
 
 		private void button3_Click(object sender, EventArgs e)
@@ -146,7 +148,7 @@ namespace BookRen
 			foreach (var f in Directory.GetFiles(path))
 			{
 				//check if file is pdf or epub?
-				if (f.Substring(f.Length - 3) == "pdf" || f.Substring(f.Length - 4) == "epub")
+				if (f.Substring(f.Length - 3) == "pdf" || f.Substring(f.Length - 4) == "epub" || f.Substring(f.Length - 4) == "djvu")
 				{
 					string relpath = ("." + f.Substring(bookfolerpath.Length)).Replace('\\', '/');
 					if (paths.Add(relpath)) //true -> not on the list, create new Entry.
